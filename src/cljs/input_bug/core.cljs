@@ -9,6 +9,9 @@
   (let [selections (reagent/atom :a)]  ;; (second @items)
     (fn []
       [:div
+       [:div "This app shows a regression between 0.6.0-rc and 0.6.0"]
+       [:div "Checkbox now does not handle transitons to nil"]
+       [:div "The text next to the checkbox shows the value of :checked"]
        [:input
         {:type      "checkbox"
          ;:checked (some? @selections) ;; works in both
